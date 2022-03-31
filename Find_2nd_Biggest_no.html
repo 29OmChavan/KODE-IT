@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Second Biggest number</title>
+</head>
+<body>
+    <script>
+        let i,j, arr=[],n,a="true";
+  
+        n=parseInt(prompt("Enter the number of elements of an array"));
+        if (n < 2) {
+            a="false";
+            document.write("Invalid Input <br>");
+    
+        }
+        if(a=="true")
+        {
+        for(i=0;i<n;i++)
+        {
+            arr[i]=parseInt(prompt("Enter the number of elements of an array "));
+        }
+    }
+        
+        arr.sort();
+    
+    for(i=1;i<n;i++)
+    {
+        for(j=0;j<i;j++)
+        {
+            if(arr[j]==arr[i])
+            {   
+                a="false"
+                break;
+            }
+    
+}
+}
+    if(a=="true")
+    {
+        document.write("The second largest element is " + arr[n-2]);
+    }
+    else if(a=="false")
+    {
+        document.write("<br>There is no second largest element");
+    }
+    </script>
+</body>
+</html>
